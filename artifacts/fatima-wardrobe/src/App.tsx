@@ -223,12 +223,8 @@ function MobileMenu({
       aria-label="Mobile menu"
     >
       <div className="flex items-center justify-between border-b border-[#ded2c4] px-5 py-6">
-        <Link
-          href="/"
-          onClick={close}
-          className="text-[16px] font-semibold tracking-[.3em]"
-        >
-          FATIMA / WARDROBE
+        <Link href="/" onClick={close} className="flex items-center">
+          <img src="/Fatima_logo.png" alt="Fatima Wardrobe" className="h-10 w-auto object-contain" />
         </Link>
         <button
           onClick={close}
@@ -911,12 +907,7 @@ function Footer() {
       <div className="mx-auto max-w-[1440px]">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <div className="text-2xl font-semibold tracking-[.35em]">
-              FATIMA
-            </div>
-            <div className="mt-2 font-mono-ui text-[9px] tracking-[.48em]">
-              WARDROBE
-            </div>
+            <img src="/Fatima_logo.png" alt="Fatima Wardrobe" className="h-16 w-auto object-contain brightness-0 invert opacity-90" />
             <p className="mt-8 max-w-xs text-sm leading-6 text-[#aa9e91]">
               A modern Pakistani label for clothes with a life ahead of them.
             </p>
