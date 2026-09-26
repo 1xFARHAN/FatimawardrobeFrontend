@@ -1031,15 +1031,14 @@ function ListingPage({
   }, [base, filters, sort]);
 
   const subCategories = useMemo(() => {
+    if (mode !== "new-in" && title !== "New in") return [];
     return [
-      { name: "Studio: The New Formal", img: allProducts[0]?.images[0] },
-      { name: "Urban The Nomad", img: allProducts[1]?.images[0] },
-      { name: "Studio: Becoming Her", img: allProducts[2]?.images[0] },
-      { name: "Artisanal Gold Impressions", img: allProducts[3]?.images[0] },
-      { name: "Basics: Prints On Repeat", img: allProducts[4]?.images[0] },
-      { name: "Best Sellers", img: allProducts[5]?.images[0] || allProducts[0]?.images[0] },
+      { name: "Ready to Wear", href: "/ready-to-wear", img: allProducts.find(p => p.category === "Ready to Wear")?.images[0] || allProducts[0]?.images[0] },
+      { name: "Unstitched", href: "/unstitched", img: allProducts.find(p => p.category === "Unstitched")?.images[0] || allProducts[1]?.images[0] },
+      { name: "Accessories", href: "/accessories", img: allProducts.find(p => p.category === "Accessories")?.images[0] || allProducts[2]?.images[0] },
+      { name: "Sale", href: "/sale", img: allProducts.find(p => p.category === "Sale")?.images[0] || allProducts[3]?.images[0] }
     ].filter((x) => x.img);
-  }, []);
+  }, [mode, title]);
 
   const FilterContent = () => (
     <div className="space-y-5">
@@ -1088,18 +1087,20 @@ function ListingPage({
         </p>
       </div>
 
-      <div className="mx-auto max-w-[1440px] px-5 md:px-12 py-6 overflow-x-auto scrollbar-hide">
-        <div className="flex items-start justify-center gap-6 md:gap-10 min-w-max mx-auto">
-          {subCategories.map((sub, idx) => (
-            <div key={idx} className="flex flex-col items-center gap-3 w-20 md:w-24 cursor-pointer group">
-              <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden border-2 border-transparent group-hover:border-[#2f2925] transition-colors p-[2px]">
-                <img src={sub.img} alt={sub.name} className="w-full h-full object-cover rounded-full" />
-              </div>
-              <span className="text-[10px] md:text-[11px] text-center leading-tight text-[#776b61] group-hover:text-[#2f2925]">{sub.name}</span>
-            </div>
-          ))}
+      {subCategories.length > 0 && (
+        <div className="mx-auto max-w-[1440px] px-5 md:px-12 py-6 overflow-x-auto scrollbar-hide">
+          <div className="flex items-start justify-center gap-6 md:gap-10 min-w-max mx-auto">
+            {subCategories.map((sub, idx) => (
+              <Link key={idx} href={sub.href || "/"} className="flex flex-col items-center gap-3 w-20 md:w-24 cursor-pointer group">
+                <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden border-2 border-transparent group-hover:border-[#2f2925] transition-colors p-[2px]">
+                  <img src={sub.img} alt={sub.name} className="w-full h-full object-cover object-top rounded-full" />
+                </div>
+                <span className="text-[10px] md:text-[11px] text-center leading-tight text-[#776b61] group-hover:text-[#2f2925]">{sub.name}</span>
+              </Link>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       <div className="mx-auto max-w-[1440px] px-5 md:px-12 mt-6">
         <div className="flex items-center justify-between border-b border-[#ded2c4] pb-4">
