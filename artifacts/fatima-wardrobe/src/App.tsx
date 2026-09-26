@@ -786,7 +786,7 @@ function EditorialBanner() {
       <img
         src="/images/hero-luxury-courtyard.png"
         alt="Gulbahar collection"
-        className="absolute inset-0 h-full w-full object-cover object-top opacity-100"
+        className="absolute inset-0 h-full w-full object-cover object-right md:object-top opacity-100"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-[#2f2925]/70 via-[#2f2925]/25 to-transparent" />
       <div className="relative flex min-h-[400px] items-end px-5 pb-14 md:px-12 md:pb-16">
@@ -1973,7 +1973,7 @@ function CollectionsPage() {
       </div>
       
       {/* Editorial Layout */}
-      <div className="mx-auto max-w-[1440px] px-5 py-12 md:px-12 md:py-20 flex flex-col gap-16 md:gap-24">
+      <div className="mx-auto max-w-[1200px] px-5 py-12 md:px-12 md:py-20 flex flex-col gap-16 md:gap-24">
         {collections.map((c, i) => {
           const isEven = i % 2 === 0;
           return (
@@ -1984,16 +1984,16 @@ function CollectionsPage() {
               data-testid={`link-collection-${c.slug}`}
             >
               {/* Image Block */}
-              <div className="w-full md:w-[55%] lg:w-[60%] overflow-hidden relative bg-[#ebe1d5]">
+              <div className="w-full md:w-[45%] lg:w-[40%] overflow-hidden relative bg-[#ebe1d5]">
                 <img
                   src={c.image}
                   alt={c.name}
-                  className="aspect-[4/5] md:aspect-[3/4] w-full object-cover object-top transition duration-[1.5s] group-hover:scale-105"
+                  className={`aspect-[4/5] md:aspect-[3/4] w-full object-cover transition duration-[1.5s] group-hover:scale-105 ${c.image.includes('courtyard') ? 'object-right' : 'object-top'}`}
                 />
               </div>
               
               {/* Text Block */}
-              <div className={`w-full md:w-[45%] lg:w-[40%] flex flex-col justify-center text-center ${isEven ? 'md:text-left' : 'md:text-right'} reveal`}>
+              <div className={`w-full md:w-[45%] lg:w-[50%] flex flex-col justify-center text-center ${isEven ? 'md:text-left' : 'md:text-right'} reveal`}>
                 <p className="eyebrow text-[#a74636] mb-5 tracking-[0.25em]">{c.kicker}</p>
                 <h2 className="font-display text-5xl md:text-7xl lg:text-[80px] text-[#2f2925] mb-8 leading-[0.9]">{c.name}</h2>
                 <div className={`w-12 h-[1px] bg-[#a74636] mx-auto ${isEven ? 'md:mx-0' : 'md:ml-auto md:mr-0'} mb-10 transition-all duration-700 group-hover:w-24`} />
