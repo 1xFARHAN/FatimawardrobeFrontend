@@ -1,0 +1,5 @@
+[
+  {"id":"hero-1","eyebrow":"The new feminine edit","title":"A softer kind of<br/>statement.","copy":"Silhouettes made for her everyday.","cta":"Explore new in","href":"/new-in","desktopImage":"/images/hero-luxury-courtyard.png","mobileImage":"/images/hero-luxury-courtyard.png"},
+  {"id":"hero-2","eyebrow":"The everyday edit","title":"Dress for the<br/>life you have.","copy":"Soft cottons, generous lines, a little more colour.","cta":"Shop ready to wear","href":"/ready-to-wear","desktopImage":"/images/ready-to-wear-editorial.png","mobileImage":"/images/ready-to-wear-editorial.png"},
+  {"id":"hero-3","eyebrow":"A note from Lahore","title":"Colour that<br/>stays with you.","copy":"A new print story for the woman with a point of view.","cta":"Read the story","href":"/collections","desktopImage":"/images/occasion-editorial.png","mobileImage":"/images/occasion-editorial.png"}
+]

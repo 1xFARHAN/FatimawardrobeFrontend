@@ -1,0 +1,7 @@
+[
+  {"slug":"the-everyday-edit","name":"The Everyday Edit","kicker":"A considered wardrobe","description":"The quiet core of Fatima Wardrobe: crisp cottons, softened tailoring and the pieces that make mornings easier.","image":"/images/ready-to-wear-editorial.png"},
+  {"slug":"gulbahar","name":"Gulbahar","kicker":"A garden after rain","description":"A study in botanical colour, fluid shapes and the pleasure of getting dressed up for no particular reason.","image":"/images/hero-luxury-courtyard.png"},
+  {"slug":"noor","name":"Noor","kicker":"Light, held close","description":"Silk, handwork and a little ceremony. Occasion dressing with a softer voice.","image":"/images/occasion-editorial.png"},
+  {"slug":"rangrez","name":"Rangrez","kicker":"Colour in conversation","description":"An unapologetic print story, drawn from old pigments and the energy of a new season.","image":"/images/unstitched-editorial.png"},
+  {"slug":"rooh","name":"Rooh","kicker":"Made to linger","description":"Textiles with soul, embroidered slowly and intended to become part of the family wardrobe.","image":"/images/occasion-editorial.png"}
+]

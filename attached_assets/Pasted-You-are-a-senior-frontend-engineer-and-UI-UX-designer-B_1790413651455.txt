@@ -1,0 +1,1238 @@
+You are a senior frontend engineer and UI/UX designer.
+
+Build a complete premium Pakistani fashion e-commerce FRONTEND inspired by the design quality, layout style, shopping experience, responsiveness, and visual hierarchy of:
+
+https://pk.khaadi.com/
+
+IMPORTANT:
+
+This is NOT an exact clone.
+
+Do not copy:
+- Khaadi logo
+- Khaadi copyrighted product images
+- Khaadi text
+- Khaadi exact branding
+- Khaadi proprietary assets
+
+Instead create an original premium Pakistani fashion website with a similar level of polish and shopping experience.
+
+==================================================
+VERY IMPORTANT ARCHITECTURE REQUIREMENT
+==================================================
+
+THIS PROJECT MUST BE FRONTEND-ONLY.
+
+DO NOT create:
+
+- backend
+- database
+- PostgreSQL
+- MongoDB
+- Supabase
+- Firebase
+- Prisma
+- Drizzle
+- Express
+- Next.js API routes
+- server actions for data persistence
+- authentication backend
+- payment backend
+- external CMS
+
+The website must be able to deploy as a static frontend website on Vercel.
+
+Use:
+
+Next.js
+TypeScript
+Tailwind CSS
+React
+Lucide Icons
+
+Use Next.js App Router.
+
+Configure the application so it can be statically generated/exported where practical.
+
+==================================================
+BRAND
+==================================================
+
+Brand name:
+
+Fatima Wardrobe
+
+Create an elegant temporary text-based logo:
+
+FATIMA
+WARDROBE
+
+Keep branding easy to change later.
+
+Design direction:
+
+- premium
+- elegant
+- Pakistani fashion
+- editorial
+- minimalist
+- sophisticated
+- image focused
+- lots of whitespace
+- modern typography
+
+Do NOT make the website look like a SaaS dashboard.
+
+==================================================
+DATA ARCHITECTURE
+==================================================
+
+ALL STORE DATA MUST COME FROM LOCAL JSON FILES.
+
+Create:
+
+src/data/products.json
+src/data/categories.json
+src/data/collections.json
+src/data/banners.json
+src/data/navigation.json
+
+DO NOT hardcode products inside React components.
+
+Products must always be loaded from products.json.
+
+Example product:
+
+{
+  "id": "p001",
+  "slug": "embroidered-lawn-shirt-pink",
+  "name": "Embroidered Lawn Shirt",
+  "category": "ready-to-wear",
+  "subcategory": "kurtas",
+  "collection": "summer-collection",
+  "price": 4990,
+  "salePrice": null,
+  "currency": "PKR",
+  "badge": "NEW",
+  "description": "A beautifully crafted embroidered lawn shirt.",
+  "fabric": "Lawn",
+  "color": "Pink",
+  "sizes": ["XS", "S", "M", "L", "XL"],
+  "images": [
+    "/images/products/p001/1.jpg",
+    "/images/products/p001/2.jpg",
+    "/images/products/p001/3.jpg"
+  ],
+  "thumbnail": "/images/products/p001/1.jpg",
+  "featured": true,
+  "bestSeller": false,
+  "newArrival": true,
+  "inStock": true
+}
+
+==================================================
+IMAGE STRUCTURE
+==================================================
+
+Store images inside:
+
+public/images/
+
+Use:
+
+public/images/products/
+public/images/categories/
+public/images/banners/
+public/images/collections/
+
+Example:
+
+public/images/products/p001/1.jpg
+public/images/products/p001/2.jpg
+public/images/products/p001/3.jpg
+
+Make sure adding products later is extremely simple:
+
+STEP 1:
+Add images to:
+
+public/images/products/product-id/
+
+STEP 2:
+Add product object to:
+
+src/data/products.json
+
+STEP 3:
+Redeploy.
+
+No source-code changes should be required to add a normal product.
+
+==================================================
+CREATE SAMPLE DATA
+==================================================
+
+Create at least 20 sample products.
+
+Use placeholder/fashion demo images that are legally safe to use.
+
+Include categories:
+
+NEW IN
+
+READY TO WEAR
+- Kurtas
+- 2 Piece
+- 3 Piece
+- Co-ords
+- Bottoms
+- Dupattas
+
+UNSTITCHED
+- 1 Piece
+- 2 Piece
+- 3 Piece
+
+COLLECTIONS
+- Summer
+- Festive
+- Luxury
+- Essentials
+
+ACCESSORIES
+
+SALE
+
+==================================================
+GLOBAL WEBSITE STRUCTURE
+==================================================
+
+Create these routes:
+
+/
+ /new-in
+ /ready-to-wear
+ /unstitched
+ /collections
+ /accessories
+ /sale
+ /category/[slug]
+ /collection/[slug]
+ /product/[slug]
+ /search
+ /wishlist
+ /cart
+ /checkout
+ /about
+ /contact
+ /shipping
+ /returns
+ /size-guide
+
+==================================================
+HEADER
+==================================================
+
+Create a premium responsive header similar in sophistication to major fashion brands.
+
+TOP BAR:
+
+Configurable announcement:
+
+"Free Delivery on Orders Above PKR 5,000"
+
+MAIN HEADER:
+
+Desktop:
+
+left:
+logo
+
+center:
+navigation
+
+NEW IN
+READY TO WEAR
+UNSTITCHED
+COLLECTIONS
+ACCESSORIES
+SALE
+
+right:
+
+Search
+Wishlist
+Shopping Bag
+
+Use Lucide icons.
+
+Header should become sticky when scrolling.
+
+Use subtle transition.
+
+==================================================
+MEGA MENU
+==================================================
+
+Desktop navigation should have premium mega menus.
+
+For example:
+
+READY TO WEAR
+
+Shop By Category
+
+Kurtas
+2 Piece
+3 Piece
+Co-ords
+Bottoms
+Dupattas
+
+Featured
+
+New Arrivals
+Bestsellers
+Summer Collection
+Festive Edit
+
+Include optional promotional image.
+
+Mega-menu content should come from navigation/category data.
+
+==================================================
+MOBILE MENU
+==================================================
+
+Create a polished full-screen or slide-in mobile navigation.
+
+Use accordion sections.
+
+Example:
+
+Ready to Wear
+    Kurtas
+    2 Piece
+    3 Piece
+    Co-ords
+
+Unstitched
+    1 Piece
+    2 Piece
+    3 Piece
+
+Collections
+    Summer
+    Festive
+    Luxury
+
+==================================================
+HOMEPAGE
+==================================================
+
+Create a beautiful fashion homepage.
+
+SECTION 1
+HERO
+
+Large full-width campaign banner.
+
+Support desktop and mobile images separately.
+
+Content should come from banners.json.
+
+Fields:
+
+{
+ "title": "...",
+ "subtitle": "...",
+ "desktopImage": "...",
+ "mobileImage": "...",
+ "buttonText": "SHOP NOW",
+ "buttonLink": "/collection/..."
+}
+
+Support multiple hero slides.
+
+Use tasteful carousel transitions.
+
+==================================================
+SHOP BY CATEGORY
+==================================================
+
+Large editorial image cards.
+
+Example:
+
+READY TO WEAR
+UNSTITCHED
+NEW ARRIVALS
+
+Hover:
+
+image slightly zooms
+overlay appears
+CTA visible
+
+==================================================
+NEW ARRIVALS
+==================================================
+
+Create horizontal/product grid section:
+
+NEW ARRIVALS
+
+Display 4 products desktop.
+
+2 products tablet.
+
+2 products mobile where practical.
+
+Provide:
+
+VIEW ALL
+
+==================================================
+PRODUCT CARD
+==================================================
+
+This component is extremely important.
+
+Each card should have:
+
+product image
+
+optional badge:
+
+NEW
+SALE
+BESTSELLER
+LIMITED
+
+wishlist heart
+
+product title
+
+price
+
+sale price
+
+original crossed price if sale
+
+available colors if configured
+
+On hover desktop:
+
+change from primary image to second image.
+
+Smooth transition.
+
+Click card:
+
+open Product Detail Page.
+
+==================================================
+EDITORIAL BANNER
+==================================================
+
+Large full-width campaign section.
+
+Example:
+
+THE SUMMER EDIT
+
+Explore effortless silhouettes designed for warmer days.
+
+SHOP COLLECTION
+
+==================================================
+BESTSELLERS
+==================================================
+
+Create another premium product section.
+
+Load products where:
+
+bestSeller = true
+
+==================================================
+SHOP BY COLLECTION
+==================================================
+
+Image grid:
+
+SUMMER
+FESTIVE
+LUXURY
+ESSENTIALS
+
+==================================================
+PROMOTIONAL SPLIT SECTION
+==================================================
+
+Create 2 large image tiles.
+
+Example:
+
+READY TO WEAR
+
+UNSTITCHED
+
+==================================================
+INSTAGRAM STYLE SECTION
+==================================================
+
+Create an editorial gallery near footer.
+
+Title:
+
+FOLLOW THE STORY
+
+Display fashion images in grid.
+
+No actual Instagram API needed.
+
+==================================================
+CATEGORY / PRODUCT LISTING PAGE
+==================================================
+
+Example:
+
+/ready-to-wear
+
+Display:
+
+breadcrumb
+
+page title
+
+description
+
+product count
+
+filters
+
+sort
+
+product grid
+
+==================================================
+FILTER SYSTEM
+==================================================
+
+All filtering happens client-side using JSON data.
+
+Filters:
+
+Category
+Subcategory
+Price
+Size
+Color
+Fabric
+Collection
+Availability
+
+Mobile:
+
+Filters open inside drawer.
+
+Desktop:
+
+sidebar or top filter system.
+
+==================================================
+SORT
+==================================================
+
+Support:
+
+Featured
+Newest
+Price Low to High
+Price High to Low
+Best Selling
+
+All sorting client-side.
+
+==================================================
+PRODUCT GRID
+==================================================
+
+Desktop:
+4 columns
+
+Large screen:
+4 or 5 depending space
+
+Tablet:
+3
+
+Mobile:
+2
+
+==================================================
+PRODUCT DETAIL PAGE
+==================================================
+
+This page must look premium.
+
+Desktop:
+
+LEFT
+
+Large image gallery.
+
+Use 2-column editorial gallery if suitable.
+
+RIGHT
+
+Product information.
+
+Show:
+
+product name
+badge
+SKU
+price
+sale price
+description
+
+COLOR
+
+SIZE SELECTOR:
+
+XS
+S
+M
+L
+XL
+
+SIZE GUIDE
+
+QUANTITY
+
+ADD TO BAG
+
+ADD TO WISHLIST
+
+Display demo availability.
+
+Additional accordion sections:
+
+PRODUCT DETAILS
+FABRIC
+CARE INSTRUCTIONS
+DELIVERY & RETURNS
+
+==================================================
+IMAGE GALLERY
+==================================================
+
+Product gallery should support:
+
+multiple images
+
+thumbnail navigation
+
+image zoom
+
+desktop gallery
+
+mobile swipe carousel
+
+==================================================
+COMPLETE THE LOOK
+==================================================
+
+Below product details display:
+
+YOU MAY ALSO LIKE
+
+and
+
+COMPLETE THE LOOK
+
+Use related products based on category/collection.
+
+==================================================
+SEARCH
+==================================================
+
+Create functional frontend search.
+
+Clicking search icon should open a polished search overlay.
+
+Search products by:
+
+name
+category
+subcategory
+collection
+color
+fabric
+
+Display matching product cards instantly.
+
+All search happens client-side.
+
+==================================================
+WISHLIST
+==================================================
+
+Wishlist must work without backend.
+
+Use:
+
+localStorage
+
+Store only product IDs.
+
+Features:
+
+add
+remove
+view wishlist
+wishlist counter
+
+Wishlist must survive browser refresh.
+
+==================================================
+SHOPPING CART
+==================================================
+
+Cart must work completely client-side.
+
+Use:
+
+localStorage
+
+Store:
+
+product ID
+size
+quantity
+
+Features:
+
+add to cart
+remove
+increase quantity
+decrease quantity
+cart count
+subtotal
+
+Persist after refresh.
+
+==================================================
+CART DRAWER
+==================================================
+
+When product is added to cart:
+
+Open elegant cart drawer.
+
+Show:
+
+thumbnail
+product
+size
+quantity
+price
+
+Buttons:
+
+VIEW BAG
+CHECKOUT
+
+==================================================
+CART PAGE
+==================================================
+
+Route:
+
+/cart
+
+Show:
+
+product
+image
+size
+quantity
+price
+
+Order Summary:
+
+Subtotal
+Shipping
+Total
+
+For demo:
+
+Shipping = PKR 250
+
+Free shipping above PKR 5000.
+
+==================================================
+CHECKOUT
+==================================================
+
+Frontend-only demonstration checkout.
+
+Do NOT connect payment gateway.
+
+Create checkout form:
+
+Contact Information
+
+Email
+Phone
+
+Shipping Address
+
+First Name
+Last Name
+Address
+Apartment
+City
+Province
+Postal Code
+
+Payment Method UI:
+
+Cash on Delivery
+
+Display:
+
+"This is a demo storefront. No real order will be processed."
+
+Create client-side validation.
+
+Order summary on right.
+
+Button:
+
+PLACE DEMO ORDER
+
+After submission:
+
+show fake confirmation:
+
+THANK YOU FOR YOUR ORDER
+
+Generate temporary frontend-only order number.
+
+Do NOT imply the order has actually been submitted to a backend.
+
+==================================================
+LOCAL STORAGE
+==================================================
+
+Create reusable utilities for localStorage.
+
+Use localStorage for:
+
+cart
+wishlist
+recently viewed products
+
+Handle SSR safely.
+
+Do not access window/localStorage before browser is available.
+
+==================================================
+RECENTLY VIEWED
+==================================================
+
+Track recently viewed product IDs in localStorage.
+
+Show section:
+
+RECENTLY VIEWED
+
+on product detail pages.
+
+==================================================
+SALE
+==================================================
+
+Products with salePrice should automatically appear on:
+
+/sale
+
+Calculate discount percentage automatically.
+
+Example:
+
+20% OFF
+
+==================================================
+FOOTER
+==================================================
+
+Create a premium large footer.
+
+Columns:
+
+SHOP
+
+New In
+Ready to Wear
+Unstitched
+Accessories
+Sale
+
+HELP
+
+Contact Us
+Shipping
+Returns
+Size Guide
+
+ABOUT
+
+Our Story
+Stores
+Careers
+
+CONNECT
+
+Instagram
+Facebook
+TikTok
+Pinterest
+
+Newsletter UI:
+
+Email address
+SUBSCRIBE
+
+Since no backend exists:
+
+display demo success state after submit.
+
+Add:
+
+© Fatima Wardrobe
+
+==================================================
+JSON ADMIN HELPER
+==================================================
+
+Because this is a static website, DO NOT attempt to modify products.json
+from the deployed browser.
+
+Instead create:
+
+/admin-preview
+
+This is NOT a real admin backend.
+
+It is only a developer convenience tool.
+
+Create a product form with:
+
+Product Name
+Slug
+Category
+Subcategory
+Collection
+Price
+Sale Price
+Description
+Fabric
+Color
+Sizes
+Image paths
+Featured
+Bestseller
+New Arrival
+In Stock
+
+Button:
+
+GENERATE JSON
+
+When clicked:
+
+Generate a correctly formatted product JSON object.
+
+Add:
+
+COPY JSON
+
+The developer can then paste the generated object into:
+
+src/data/products.json
+
+Also display instructions:
+
+1. Add images into public/images/products/{product-id}/
+2. Generate product JSON
+3. Paste into src/data/products.json
+4. Commit/push changes
+5. Vercel will redeploy
+
+IMPORTANT:
+
+Do not pretend this admin page can permanently modify deployed JSON files.
+
+==================================================
+OPTIONAL JSON EXPORT
+==================================================
+
+Allow the developer helper page to download/export generated JSON.
+
+Do not upload it anywhere.
+
+Everything stays inside the browser.
+
+==================================================
+RESPONSIVE DESIGN
+==================================================
+
+Test:
+
+375px
+430px
+768px
+1024px
+1280px
+1440px
+1920px
+
+Mobile experience is extremely important.
+
+Mobile should NOT just be a compressed desktop website.
+
+==================================================
+ANIMATIONS
+==================================================
+
+Use subtle premium animations.
+
+Examples:
+
+image hover zoom
+menu transitions
+cart drawer
+search overlay
+fade-in sections
+button transitions
+
+Avoid excessive animation.
+
+Do not make website slow.
+
+==================================================
+PERFORMANCE
+==================================================
+
+Optimize aggressively.
+
+Use:
+
+Next/Image where appropriate
+
+lazy loading
+
+correct image sizes
+
+responsive images
+
+minimal JavaScript
+
+component code splitting where useful
+
+Avoid huge packages.
+
+==================================================
+SEO
+==================================================
+
+Create metadata for:
+
+homepage
+categories
+collections
+products
+
+Use product JSON data for metadata.
+
+Add:
+
+title
+description
+OpenGraph metadata
+
+Create semantic HTML.
+
+==================================================
+ACCESSIBILITY
+==================================================
+
+Use:
+
+alt text
+keyboard navigation
+focus states
+semantic HTML
+accessible buttons
+accessible drawers
+accessible modal dialogs
+
+==================================================
+CODE QUALITY
+==================================================
+
+Use reusable components.
+
+Suggested:
+
+Header
+MegaMenu
+MobileMenu
+AnnouncementBar
+HeroBanner
+ProductCard
+ProductGrid
+ProductFilters
+ProductSort
+ProductGallery
+SizeSelector
+CartDrawer
+SearchOverlay
+WishlistButton
+CollectionCard
+Newsletter
+Footer
+
+Do not duplicate components unnecessarily.
+
+Use TypeScript interfaces/types for JSON structures.
+
+==================================================
+IMPORTANT ERROR HANDLING
+==================================================
+
+Website should gracefully handle:
+
+missing image
+missing product
+invalid slug
+empty search
+empty wishlist
+empty cart
+no filtered products
+
+Create proper empty states.
+
+==================================================
+STATIC DEPLOYMENT
+==================================================
+
+The final project must require:
+
+NO DATABASE
+
+NO BACKEND
+
+NO ENVIRONMENT VARIABLES for core functionality
+
+NO API server
+
+The project should be deployable directly to Vercel.
+
+Verify:
+
+npm install
+npm run build
+
+must succeed.
+
+Fix all TypeScript errors.
+
+Fix all lint/build errors that prevent deployment.
+
+==================================================
+README
+==================================================
+
+Create README.md explaining:
+
+HOW TO ADD A PRODUCT
+
+1. Put images inside:
+
+public/images/products/product-id/
+
+Example:
+
+public/images/products/p021/1.jpg
+public/images/products/p021/2.jpg
+
+2. Open:
+
+src/data/products.json
+
+3. Add:
+
+{
+   ...
+}
+
+4. Save
+
+5. Commit/push
+
+6. Vercel automatically rebuilds the website when connected to the repository.
+
+Also explain:
+
+HOW TO ADD CATEGORY
+
+HOW TO ADD COLLECTION
+
+HOW TO CHANGE HOMEPAGE BANNER
+
+HOW TO CHANGE BRAND NAME
+
+HOW TO CHANGE ANNOUNCEMENT BAR
+
+HOW TO DEPLOY TO VERCEL
+
+==================================================
+FINAL REQUIREMENT
+==================================================
+
+Do not stop after making the homepage.
+
+Build the COMPLETE frontend experience.
+
+After implementation verify:
+
+Homepage works
+Navigation works
+Mega menu works
+Mobile menu works
+Categories work
+Collections work
+Product filters work
+Sorting works
+Search works
+Product pages work
+Image galleries work
+Sizes work
+Wishlist works
+Cart works
+localStorage persistence works
+Checkout demo works
+Sale calculations work
+Responsive layout works
+No broken routes
+No missing imports
+No TypeScript build errors
+Vercel production build succeeds
+
+The final result should feel like a polished premium Pakistani fashion brand,
+not a generic React template.

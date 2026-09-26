@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Fatima Wardrobe"
+description = "A premium Pakistani fashion storefront with an editorial shopping experience, local JSON catalog data, client-side wishlist and cart persistence, and a frontend-only demo checkout."
+version = "1.0.0"
+id = "artifacts/fatima-wardrobe"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19842
+
+[services.development]
+run = "pnpm --filter @workspace/fatima-wardrobe run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/fatima-wardrobe", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/fatima-wardrobe/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19842"
+BASE_PATH = "/"

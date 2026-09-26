@@ -1,0 +1,399 @@
+[
+  {
+    "id": "fw-001",
+    "slug": "black-embroidered-kurta",
+    "name": "Black Embroidered Kurta",
+    "category": "ready-to-wear",
+    "subcategory": "Kurtas",
+    "collection": "the-everyday-edit",
+    "price": 8500,
+    "compareAt": null,
+    "badge": "Bestseller",
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      "Onyx"
+    ],
+    "fabric": "Raw Silk",
+    "availability": "in-stock",
+    "bestSelling": 95,
+    "date": "2025-02-01",
+    "images": [
+      "/images/ready-to-wear-editorial.png"
+    ],
+    "description": "A refined black kurta with delicate white threadwork."
+  },
+  {
+    "id": "fw-002",
+    "slug": "peach-occasion-formal",
+    "name": "Peach Occasion Formal",
+    "category": "ready-to-wear",
+    "subcategory": "Occasion",
+    "collection": "noor",
+    "price": 25000,
+    "compareAt": null,
+    "badge": "Limited",
+    "sizes": [
+      "M",
+      "L"
+    ],
+    "colors": [
+      "Rose",
+      "Gold"
+    ],
+    "fabric": "Organza",
+    "availability": "in-stock",
+    "bestSelling": 65,
+    "date": "2024-12-20",
+    "images": [
+      "/images/occasion-editorial.png"
+    ],
+    "description": "A breathtaking peach formal dress for evening wear."
+  },
+  {
+    "id": "fw-004",
+    "slug": "burgundy-velvet-lehenga",
+    "name": "Burgundy Velvet Lehenga",
+    "category": "ready-to-wear",
+    "subcategory": "Dresses",
+    "collection": "rooh",
+    "price": 45000,
+    "compareAt": 50000,
+    "badge": "Sale",
+    "sizes": [
+      "S",
+      "M"
+    ],
+    "colors": [
+      "Burgundy",
+      "Gold"
+    ],
+    "fabric": "Velvet",
+    "availability": "low-stock",
+    "bestSelling": 98,
+    "date": "2024-11-15",
+    "images": [
+      "/images/luxury_formal_burgundy_1790427684372.jpg"
+    ],
+    "description": "A majestic burgundy velvet formal outfit with heavy zari work."
+  },
+  {
+    "id": "fw-005",
+    "slug": "emerald-zari-shirt",
+    "name": "Emerald Zari Shirt",
+    "category": "ready-to-wear",
+    "subcategory": "Shirts",
+    "collection": "gulbahar",
+    "price": 22000,
+    "compareAt": null,
+    "badge": "New in",
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      "Emerald",
+      "Silver"
+    ],
+    "fabric": "Raw Silk",
+    "availability": "in-stock",
+    "bestSelling": 85,
+    "date": "2025-02-18",
+    "images": [
+      "/images/luxury_formal_emerald_1790427707411.jpg"
+    ],
+    "description": "Deep emerald raw silk embellished with striking silver details."
+  },
+  {
+    "id": "fw-006",
+    "slug": "white-gold-kurta",
+    "name": "White & Gold Premium Kurta",
+    "category": "ready-to-wear",
+    "subcategory": "Kurtas",
+    "collection": "rangrez",
+    "price": 12500,
+    "compareAt": null,
+    "badge": "Bestseller",
+    "sizes": [
+      "S",
+      "M"
+    ],
+    "colors": [
+      "Ivory",
+      "Gold"
+    ],
+    "fabric": "Cotton Silk",
+    "availability": "in-stock",
+    "bestSelling": 99,
+    "date": "2025-02-25",
+    "images": [
+      "/images/lux_kurta_1_1790430926797.jpg"
+    ],
+    "description": "An exquisite white kurta detailed with heavy gold thread embroidery."
+  },
+  {
+    "id": "fw-007",
+    "slug": "black-silver-shirt",
+    "name": "Midnight Silver Shirt",
+    "category": "ready-to-wear",
+    "subcategory": "Shirts",
+    "collection": "the-everyday-edit",
+    "price": 14000,
+    "compareAt": 16000,
+    "badge": "Sale",
+    "sizes": [
+      "M",
+      "L"
+    ],
+    "colors": [
+      "Onyx",
+      "Silver"
+    ],
+    "fabric": "Raw Silk",
+    "availability": "in-stock",
+    "bestSelling": 76,
+    "date": "2025-01-30",
+    "images": [
+      "/images/lux_kurta_2_1790430938045.jpg"
+    ],
+    "description": "A deep black raw silk shirt adorned with intricate silver motifs."
+  },
+  {
+    "id": "fw-008",
+    "slug": "bridal-red-lehenga",
+    "name": "Bridal Red Zari Lehenga",
+    "category": "ready-to-wear",
+    "subcategory": "Occasion",
+    "collection": "noor",
+    "price": 120000,
+    "compareAt": null,
+    "badge": "Limited",
+    "sizes": [
+      "S",
+      "M"
+    ],
+    "colors": [
+      "Ruby",
+      "Gold"
+    ],
+    "fabric": "Net & Silk",
+    "availability": "low-stock",
+    "bestSelling": 50,
+    "date": "2024-10-12",
+    "images": [
+      "/images/lux_dress_1_1790430951552.jpg"
+    ],
+    "description": "A heavily embellished traditional red bridal lehenga for your special day."
+  },
+  {
+    "id": "fw-009",
+    "slug": "ivory-floral-unstitched",
+    "name": "Ivory Floral Unstitched",
+    "category": "unstitched",
+    "subcategory": "Printed Lawn",
+    "collection": "rangrez",
+    "price": 4500,
+    "compareAt": null,
+    "badge": "New in",
+    "sizes": [
+      "3-piece"
+    ],
+    "colors": [
+      "Ivory",
+      "Crimson"
+    ],
+    "fabric": "Lawn",
+    "availability": "in-stock",
+    "bestSelling": 80,
+    "date": "2025-02-15",
+    "images": [
+      "/images/unstitched-editorial.png"
+    ],
+    "description": "A classic ivory three-piece lawn with floral motifs."
+  },
+  {
+    "id": "fw-010",
+    "slug": "royal-velvet-cambric",
+    "name": "Royal Velvet Unstitched",
+    "category": "unstitched",
+    "subcategory": "Cambric",
+    "collection": "noor",
+    "price": 14500,
+    "compareAt": null,
+    "badge": null,
+    "sizes": [
+      "3-piece"
+    ],
+    "colors": [
+      "Navy",
+      "Emerald"
+    ],
+    "fabric": "Velvet",
+    "availability": "in-stock",
+    "bestSelling": 70,
+    "date": "2025-01-25",
+    "images": [
+      "/images/luxury_unstitched_flatlay_1790427695988.jpg"
+    ],
+    "description": "Premium unstitched velvet fabrics presented in a royal flatlay."
+  },
+  {
+    "id": "fw-011",
+    "slug": "floral-printed-lawn",
+    "name": "Teal Floral Printed Lawn",
+    "category": "unstitched",
+    "subcategory": "Printed Lawn",
+    "collection": "gulbahar",
+    "price": 3800,
+    "compareAt": 4500,
+    "badge": "Sale",
+    "sizes": [
+      "3-piece"
+    ],
+    "colors": [
+      "Teal",
+      "Rose"
+    ],
+    "fabric": "Lawn",
+    "availability": "in-stock",
+    "bestSelling": 89,
+    "date": "2025-02-28",
+    "images": [
+      "/images/lux_lawn_1_1790430964918.jpg"
+    ],
+    "description": "Rich floral printed lawn fabric featuring vibrant traditional motifs."
+  },
+  {
+    "id": "fw-012",
+    "slug": "pink-chiffon-unstitched",
+    "name": "Pink Embroidered Chiffon",
+    "category": "unstitched",
+    "subcategory": "Embroidered",
+    "collection": "noor",
+    "price": 16500,
+    "compareAt": null,
+    "badge": "Bestseller",
+    "sizes": [
+      "3-piece"
+    ],
+    "colors": [
+      "Rose",
+      "Gold"
+    ],
+    "fabric": "Chiffon",
+    "availability": "low-stock",
+    "bestSelling": 94,
+    "date": "2025-01-15",
+    "images": [
+      "/images/lux_lawn_2_1790430976771.jpg"
+    ],
+    "description": "Soft pink chiffon fabric with heavy gold zari embroidery, unstitched."
+  },
+  {
+    "id": "fw-013",
+    "slug": "tan-leather-bag",
+    "name": "Tan Leather Everyday Bag",
+    "category": "accessories",
+    "subcategory": "Bags",
+    "collection": "the-everyday-edit",
+    "price": 12500,
+    "compareAt": 14000,
+    "badge": "Sale",
+    "sizes": [
+      "One size"
+    ],
+    "colors": [
+      "Tan"
+    ],
+    "fabric": "Leather",
+    "availability": "low-stock",
+    "bestSelling": 90,
+    "date": "2025-01-10",
+    "images": [
+      "/images/accessories-editorial.png"
+    ],
+    "description": "An exquisite tan leather handbag perfect for daily use."
+  },
+  {
+    "id": "fw-014",
+    "slug": "heavy-gold-jhumkas",
+    "name": "Heavy Gold Jhumkas & Clutch",
+    "category": "accessories",
+    "subcategory": "Jewellery",
+    "collection": "noor",
+    "price": 6500,
+    "compareAt": null,
+    "badge": "Bestseller",
+    "sizes": [
+      "One size"
+    ],
+    "colors": [
+      "Gold",
+      "Ruby"
+    ],
+    "fabric": "Brass",
+    "availability": "in-stock",
+    "bestSelling": 92,
+    "date": "2025-02-10",
+    "images": [
+      "/images/luxury_accessories_gold_1790427717901.jpg"
+    ],
+    "description": "Traditional gold-plated jhumkas styled with a velvet clutch."
+  },
+  {
+    "id": "fw-015",
+    "slug": "velvet-potli-bag",
+    "name": "Embroidered Velvet Potli",
+    "category": "accessories",
+    "subcategory": "Bags",
+    "collection": "rooh",
+    "price": 4500,
+    "compareAt": null,
+    "badge": "New in",
+    "sizes": [
+      "One size"
+    ],
+    "colors": [
+      "Emerald",
+      "Gold"
+    ],
+    "fabric": "Velvet",
+    "availability": "in-stock",
+    "bestSelling": 81,
+    "date": "2025-02-22",
+    "images": [
+      "/images/lux_bag_1_1790430987100.jpg"
+    ],
+    "description": "A beautiful handcrafted traditional velvet potli bag with gold embroidery."
+  },
+  {
+    "id": "fw-016",
+    "slug": "kundan-bridal-set",
+    "name": "Kundan Bridal Set",
+    "category": "accessories",
+    "subcategory": "Jewellery",
+    "collection": "noor",
+    "price": 28000,
+    "compareAt": 32000,
+    "badge": "Sale",
+    "sizes": [
+      "One size"
+    ],
+    "colors": [
+      "Gold",
+      "Pearl"
+    ],
+    "fabric": "Brass & Kundan",
+    "availability": "low-stock",
+    "bestSelling": 75,
+    "date": "2024-11-05",
+    "images": [
+      "/images/lux_jewel_1_1790430998122.jpg"
+    ],
+    "description": "A heavy kundan bridal necklace and earrings set for luxurious occasions."
+  }
+]
