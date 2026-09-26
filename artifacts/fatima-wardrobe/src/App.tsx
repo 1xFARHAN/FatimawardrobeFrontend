@@ -80,8 +80,16 @@ function Shell({ children }: { children: React.ReactNode }) {
           >
             <Menu size={20} strokeWidth={1.4} />
           </button>
-          <Link href="/" className="flex items-center justify-center" data-testid="link-logo">
-            <img src="/Fatima_logo.png" alt="Fatima Wardrobe" className="h-14 md:h-16 w-auto object-contain" />
+          <Link href="/" className="flex items-center gap-3" data-testid="link-logo">
+            <img src="/Fatima_logo.png" alt="Fatima Wardrobe Logo" className="h-10 md:h-12 w-auto object-contain" />
+            <div className="flex flex-col items-center md:items-start leading-none text-[#2f2925]">
+              <span className="block text-[15px] md:text-[19px] font-semibold tracking-[.34em]">
+                FATIMA
+              </span>
+              <span className="mt-[2px] md:mt-1 block text-center md:text-left font-mono-ui text-[7px] md:text-[8px] tracking-[.48em]">
+                WARDROBE
+              </span>
+            </div>
           </Link>
           <nav
             className="hidden items-center gap-7 lg:flex"
