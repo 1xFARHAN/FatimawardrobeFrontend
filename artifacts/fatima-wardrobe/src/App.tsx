@@ -57,7 +57,7 @@ function Shell({ children }: { children: React.ReactNode }) {
       document.body.style.overflow = previousOverflow;
     };
   }, [menu, search, store.bagOpen]);
-  const bagCount = store.bag.reduce((sum, item) => sum + item.quantity, 0);
+  const bagCount = store.bag.reduce((sum, item) => allProducts.some(p => p.id === item.id) ? sum + item.quantity : sum, 0);
   const cartTotal = store.bag.reduce((sum, item) => {
     const p = allProducts.find((x) => x.id === item.id);
     return sum + (p?.price || 0) * item.quantity;
@@ -987,6 +987,7 @@ function ListingPage({
   hideSubcategories?: boolean;
 }) {
   const [filterOpen, setFilterOpen] = useState(false);
+  const [columns, setColumns] = useState(4);
   const [sort, setSort] = useState("featured");
   const [filters, setFilters] = useState({
     category: "",
@@ -1138,15 +1139,15 @@ function ListingPage({
           </div>
 
           <div className="flex items-center gap-2 md:gap-3 text-[#cfc1b1]">
-            <div className="hidden md:flex gap-1 h-5 cursor-pointer hover:text-[#2f2925]"><div className="w-2 h-full border border-current"></div><div className="w-2 h-full border border-current"></div></div>
-            <div className="hidden md:flex gap-1 h-5 cursor-pointer hover:text-[#2f2925]"><div className="w-1.5 h-full border border-current"></div><div className="w-1.5 h-full border border-current"></div><div className="w-1.5 h-full border border-current"></div></div>
-            <div className="flex gap-[2px] h-5 cursor-pointer text-[#2f2925]"><div className="w-[6px] h-full border border-current"></div><div className="w-[6px] h-full border border-current"></div><div className="w-[6px] h-full border border-current"></div><div className="w-[6px] h-full border border-current"></div></div>
+            <div onClick={() => setColumns(2)} className={`hidden md:flex gap-1 h-5 cursor-pointer transition-colors hover:text-[#2f2925] ${columns === 2 ? 'text-[#2f2925]' : ''}`}><div className="w-2 h-full border border-current"></div><div className="w-2 h-full border border-current"></div></div>
+            <div onClick={() => setColumns(3)} className={`hidden md:flex gap-1 h-5 cursor-pointer transition-colors hover:text-[#2f2925] ${columns === 3 ? 'text-[#2f2925]' : ''}`}><div className="w-1.5 h-full border border-current"></div><div className="w-1.5 h-full border border-current"></div><div className="w-1.5 h-full border border-current"></div></div>
+            <div onClick={() => setColumns(4)} className={`hidden md:flex gap-[2px] h-5 cursor-pointer transition-colors hover:text-[#2f2925] ${columns === 4 ? 'text-[#2f2925]' : ''}`}><div className="w-[6px] h-full border border-current"></div><div className="w-[6px] h-full border border-current"></div><div className="w-[6px] h-full border border-current"></div><div className="w-[6px] h-full border border-current"></div></div>
           </div>
         </div>
       </div>
       
       <div className="mx-auto max-w-[1440px] px-5 md:px-12 pt-6">
-        <div className="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-3">
+        <div className={`grid grid-cols-2 gap-2 md:gap-3 ${columns === 2 ? "md:grid-cols-2" : columns === 3 ? "md:grid-cols-3" : "md:grid-cols-4"}`}>
           {shown.map((p) => (
             <ProductCard key={p.id} product={p} />
           ))}
