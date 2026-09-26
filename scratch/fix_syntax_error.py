@@ -7,6 +7,7 @@ with open(filepath, 'r', encoding='utf-8') as f:
 
 # Fix the accidental backslashes
 text = text.replace(r"isEven ? \'md:flex-row\' : \'md:flex-row-reverse\'", "isEven ? 'md:flex-row' : 'md:flex-row-reverse'")
+text = text.replace(r"isEven ? \'md:text-left\' : \'md:text-right\'", "isEven ? 'md:text-left' : 'md:text-right'")
 
 with open(filepath, 'w', encoding='utf-8') as f:
     f.write(text)

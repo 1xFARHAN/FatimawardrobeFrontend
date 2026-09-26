@@ -1973,18 +1973,18 @@ function CollectionsPage() {
       </div>
       
       {/* Editorial Layout */}
-      <div className="mx-auto max-w-[1200px] px-5 py-12 md:px-12 md:py-20 flex flex-col gap-16 md:gap-24">
+      <div className="mx-auto max-w-[1100px] px-5 py-12 md:px-12 md:py-16 flex flex-col gap-12 md:gap-16">
         {collections.map((c, i) => {
           const isEven = i % 2 === 0;
           return (
             <Link
               href={`/collection/${c.slug}`}
-              className={`group flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-8 md:gap-16`}
+              className={`group flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-8 md:gap-12`}
               key={c.slug}
               data-testid={`link-collection-${c.slug}`}
             >
               {/* Image Block */}
-              <div className="w-full md:w-[45%] lg:w-[40%] overflow-hidden relative bg-[#ebe1d5]">
+              <div className="w-full md:w-[48%] lg:w-[48%] overflow-hidden relative bg-[#ebe1d5]">
                 <img
                   src={c.image}
                   alt={c.name}
@@ -1993,7 +1993,7 @@ function CollectionsPage() {
               </div>
               
               {/* Text Block */}
-              <div className={`w-full md:w-[45%] lg:w-[50%] flex flex-col justify-center text-center ${isEven ? 'md:text-left' : 'md:text-right'} reveal`}>
+              <div className={`w-full md:w-[48%] lg:w-[48%] flex flex-col justify-center text-center ${isEven ? 'md:text-left' : 'md:text-right'} reveal`}>
                 <p className="eyebrow text-[#a74636] mb-5 tracking-[0.25em]">{c.kicker}</p>
                 <h2 className="font-display text-5xl md:text-7xl lg:text-[80px] text-[#2f2925] mb-8 leading-[0.9]">{c.name}</h2>
                 <div className={`w-12 h-[1px] bg-[#a74636] mx-auto ${isEven ? 'md:mx-0' : 'md:ml-auto md:mr-0'} mb-10 transition-all duration-700 group-hover:w-24`} />
