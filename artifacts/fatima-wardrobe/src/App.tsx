@@ -601,7 +601,7 @@ function ProductCard({
             src={product.images[0]}
             alt={product.name}
             loading="lazy"
-            className="aspect-[3/4] w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+            className="aspect-[3/4] w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]"
           />
         </Link>
         <button
@@ -714,7 +714,7 @@ function Home() {
               <img
                 src={cat.image}
                 alt={cat.name}
-                className="aspect-[.84] w-full object-cover transition duration-700 group-hover:scale-[1.04]"
+                className="aspect-[.84] w-full object-cover object-top transition duration-700 group-hover:scale-[1.04]"
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#2f2925]/70 to-transparent p-5 pt-20 text-[#f8f1e7]">
                 <p className="font-display text-3xl">{cat.name}</p>
@@ -1256,7 +1256,7 @@ function ProductDetail() {
             <img
               src={product.images[image]}
               alt={product.name}
-              className="aspect-[.82] w-full object-cover md:aspect-[.78]"
+              className="aspect-[.82] w-full object-cover object-top md:aspect-[.78]"
               onClick={() => setZoom(true)}
             />
             <button
@@ -1966,7 +1966,7 @@ function CollectionsPage() {
               <img
                 src={c.image}
                 alt={c.name}
-                className="aspect-[1.15] w-full object-cover transition duration-700 group-hover:scale-105"
+                className="aspect-[1.15] w-full object-cover object-top transition duration-700 group-hover:scale-105"
               />
             </div>
             <p className="eyebrow mt-5 text-[#a74636]">{c.kicker}</p>

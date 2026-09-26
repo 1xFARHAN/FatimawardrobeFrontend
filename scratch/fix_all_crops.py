@@ -5,25 +5,27 @@ filepath = r'artifacts\fatima-wardrobe\src\App.tsx'
 with open(filepath, 'r', encoding='utf-8') as f:
     text = f.read()
 
-# 1. EditorialBanner image
-text = text.replace(
-    'className="absolute inset-0 h-full w-full object-cover opacity-100"',
-    'className="absolute inset-0 h-full w-full object-cover object-top opacity-100"'
-)
+# Fix CollectionsPage image
+pattern1 = r'className="aspect-\[1\.15\] w-full object-cover transition duration-700 group-hover:scale-105"'
+repl1 = 'className="aspect-[1.15] w-full object-cover object-top transition duration-700 group-hover:scale-105"'
+text = re.sub(pattern1, repl1, text)
 
-# 2. PromoTile image
-text = text.replace(
-    'className="aspect-[1.15] h-full w-full object-cover transition duration-700 group-hover:scale-[1.04]"',
-    'className="aspect-[1.15] h-full w-full object-cover object-top transition duration-700 group-hover:scale-[1.04]"'
-)
+# Fix ProductCard image
+pattern2 = r'className="aspect-\[3/4\] w-full object-cover transition duration-500 group-hover:scale-\[1\.03\]"'
+repl2 = 'className="aspect-[3/4] w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]"'
+text = re.sub(pattern2, repl2, text)
 
-# 3. CollectionPage header banner image
-text = text.replace(
-    'className="absolute inset-0 h-full w-full object-cover"',
-    'className="absolute inset-0 h-full w-full object-cover object-top"'
-)
+# Fix Category block image (Editorial)
+pattern3 = r'className="aspect-\[\.84\] w-full object-cover transition duration-700 group-hover:scale-\[1\.04\]"'
+repl3 = 'className="aspect-[.84] w-full object-cover object-top transition duration-700 group-hover:scale-[1.04]"'
+text = re.sub(pattern3, repl3, text)
+
+# Fix Product Detail image
+pattern4 = r'className="aspect-\[\.82\] w-full object-cover md:aspect-\[\.78\]"'
+repl4 = 'className="aspect-[.82] w-full object-cover object-top md:aspect-[.78]"'
+text = re.sub(pattern4, repl4, text)
 
 with open(filepath, 'w', encoding='utf-8') as f:
     f.write(text)
 
-print("Fixed object-top positioning on all banners and promo tiles")
+print("All missing object-top classes added!")
