@@ -1953,7 +1953,7 @@ function CollectionsPage() {
   return (
     <div className="bg-[#fcfbf9]">
       {/* Hero Section - No Model, Fabric Flatlay */}
-      <div className="relative min-h-[500px] md:min-h-[700px] overflow-hidden bg-[#2f2925] flex items-center justify-center">
+      <div className="relative min-h-[400px] md:min-h-[550px] overflow-hidden bg-[#2f2925] flex items-center justify-center">
         <img
           src="/images/luxury_unstitched_flatlay_1790427695988.jpg"
           alt="The Collections"
@@ -1973,13 +1973,13 @@ function CollectionsPage() {
       </div>
       
       {/* Editorial Layout */}
-      <div className="mx-auto max-w-[1440px] px-5 py-24 md:px-16 md:py-40 flex flex-col gap-32 md:gap-48">
+      <div className="mx-auto max-w-[1440px] px-5 py-12 md:px-12 md:py-20 flex flex-col gap-16 md:gap-24">
         {collections.map((c, i) => {
           const isEven = i % 2 === 0;
           return (
             <Link
               href={`/collection/${c.slug}`}
-              className={`group flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-12 md:gap-24`}
+              className={`group flex flex-col ${isEven ? \'md:flex-row\' : \'md:flex-row-reverse\'} items-center gap-8 md:gap-16`}
               key={c.slug}
               data-testid={`link-collection-${c.slug}`}
             >
