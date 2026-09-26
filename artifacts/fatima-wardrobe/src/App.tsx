@@ -519,7 +519,7 @@ function Hero() {
         <img
           src={item.desktopImage}
           alt={item.title.replace("<br/>", " ")}
-          className="absolute inset-0 h-full w-full object-cover object-top opacity-90"
+          className={`absolute inset-0 h-full w-full object-cover opacity-90 ${item.id === "hero-1" ? "object-right md:object-top" : "object-top"}`}
         />
       </picture>
       <div className="absolute inset-0 bg-gradient-to-r from-[#2f2925]/60 via-[#2f2925]/15 to-transparent" />

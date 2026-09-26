@@ -7,7 +7,8 @@
     "cta": "Explore Collection",
     "href": "/unstitched",
     "desktopImage": "/images/hero-luxury-courtyard.png",
-    "mobileImage": "/images/hero-luxury-courtyard.png"
+    "mobileImage": "/images/hero-luxury-courtyard.png",
+    "objectPosition": "object-[85%_top] md:object-top"
   },
   {
     "id": "hero-2",
@@ -17,7 +18,8 @@
     "cta": "Shop Ready To Wear",
     "href": "/ready-to-wear",
     "desktopImage": "/images/ready-to-wear-editorial.png",
-    "mobileImage": "/images/ready-to-wear-editorial.png"
+    "mobileImage": "/images/ready-to-wear-editorial.png",
+    "objectPosition": "object-center md:object-top"
   },
   {
     "id": "hero-3",
@@ -27,6 +29,7 @@
     "cta": "Discover Accessories",
     "href": "/accessories",
     "desktopImage": "/images/occasion-editorial.png",
-    "mobileImage": "/images/occasion-editorial.png"
+    "mobileImage": "/images/occasion-editorial.png",
+    "objectPosition": "object-center md:object-top"
   }
 ]
