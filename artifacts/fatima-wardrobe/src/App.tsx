@@ -1972,42 +1972,40 @@ function CollectionsPage() {
         </div>
       </div>
       
-      {/* Editorial Layout */}
-      <div className="mx-auto max-w-[1200px] px-5 py-12 md:px-12 md:py-20 flex flex-col gap-16 md:gap-24">
-        {collections.map((c, i) => {
-          const isEven = i % 2 === 0;
-          return (
+      {/* Clean Grid Layout */}
+      <div className="mx-auto max-w-[1440px] px-5 py-12 md:px-12 md:py-24">
+        <div className="grid gap-x-8 gap-y-16 md:grid-cols-2 lg:grid-cols-3">
+          {collections.map((c, i) => (
             <Link
               href={`/collection/${c.slug}`}
-              className={`group flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-8 md:gap-16`}
+              className="group flex flex-col"
               key={c.slug}
               data-testid={`link-collection-${c.slug}`}
             >
-              {/* Image Block */}
-              <div className="w-full md:w-[45%] lg:w-[40%] overflow-hidden relative bg-[#ebe1d5]">
+              <div className="overflow-hidden relative bg-[#ebe1d5]">
                 <img
                   src={c.image}
                   alt={c.name}
-                  className={`aspect-[4/5] md:aspect-[3/4] w-full object-cover transition duration-[1.5s] group-hover:scale-105 ${c.image.includes('courtyard') ? 'object-right' : 'object-top'}`}
+                  className={`aspect-[3/4] w-full object-cover transition duration-[1.5s] group-hover:scale-105 ${c.image.includes('courtyard') ? 'object-right' : 'object-top'}`}
                 />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition duration-700" />
               </div>
               
-              {/* Text Block */}
-              <div className={`w-full md:w-[45%] lg:w-[50%] flex flex-col justify-center text-center ${isEven ? 'md:text-left' : 'md:text-right'} reveal`}>
-                <p className="eyebrow text-[#a74636] mb-5 tracking-[0.25em]">{c.kicker}</p>
-                <h2 className="font-display text-5xl md:text-7xl lg:text-[80px] text-[#2f2925] mb-8 leading-[0.9]">{c.name}</h2>
-                <div className={`w-12 h-[1px] bg-[#a74636] mx-auto ${isEven ? 'md:mx-0' : 'md:ml-auto md:mr-0'} mb-10 transition-all duration-700 group-hover:w-24`} />
-                <p className={`text-base leading-8 text-[#776b61] mb-12 max-w-md mx-auto ${isEven ? 'md:mx-0' : 'md:ml-auto md:mr-0'}`}>
+              <div className="mt-6 flex flex-col text-left">
+                <p className="eyebrow text-[#a74636] mb-3 tracking-[0.2em]">{c.kicker}</p>
+                <h2 className="font-display text-4xl text-[#2f2925] mb-4 group-hover:text-[#a74636] transition-colors">{c.name}</h2>
+                <div className="w-12 h-[1px] bg-[#a74636] mb-5 transition-all duration-500 group-hover:w-24" />
+                <p className="text-sm leading-6 text-[#776b61] mb-6 line-clamp-2">
                   {c.description}
                 </p>
-                <div className={`inline-flex items-center gap-4 text-xs uppercase tracking-[0.2em] text-[#2f2925] group-hover:text-[#a74636] transition-colors justify-center ${isEven ? 'md:justify-start' : 'md:justify-end'}`}>
-                  <span>Explore Collection</span>
-                  <ArrowRight size={16} strokeWidth={1} className={`transform transition-transform duration-500 group-hover:translate-x-2`} />
+                <div className="inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.2em] text-[#2f2925] group-hover:text-[#a74636] transition-colors">
+                  <span>Explore</span>
+                  <ArrowRight size={14} strokeWidth={1.5} className="transform transition-transform duration-500 group-hover:translate-x-1" />
                 </div>
               </div>
             </Link>
-          );
-        })}
+          ))}
+        </div>
       </div>
     </div>
   );
