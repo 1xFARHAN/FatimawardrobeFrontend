@@ -1979,7 +1979,7 @@ function CollectionsPage() {
           return (
             <Link
               href={`/collection/${c.slug}`}
-              className={`group flex flex-col ${isEven ? \'md:flex-row\' : \'md:flex-row-reverse\'} items-center gap-8 md:gap-16`}
+              className={`group flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-8 md:gap-16`}
               key={c.slug}
               data-testid={`link-collection-${c.slug}`}
             >
