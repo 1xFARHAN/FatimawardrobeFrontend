@@ -1951,61 +1951,65 @@ function CollectionPage() {
 }
 function CollectionsPage() {
   return (
-    <>
-      <div className="relative min-h-[450px] md:min-h-[550px] overflow-hidden text-[#f8f1e7] bg-[#2f2925]">
+    <div className="bg-[#fcfbf9]">
+      {/* Hero Section - No Model, Fabric Flatlay */}
+      <div className="relative min-h-[500px] md:min-h-[700px] overflow-hidden bg-[#2f2925] flex items-center justify-center">
         <img
-          src="/images/ready-to-wear-editorial.png"
+          src="/images/luxury_unstitched_flatlay_1790427695988.jpg"
           alt="The Collections"
-          className="absolute inset-0 h-full w-full object-cover object-top opacity-60"
+          className="absolute inset-0 h-full w-full object-cover opacity-50 mix-blend-overlay"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#2f2925]/90 via-[#2f2925]/30 to-transparent" />
-        <div className="relative flex min-h-[450px] md:min-h-[550px] items-end px-5 pb-14 md:px-12 md:pb-20">
-          <div className="max-w-2xl reveal">
-            <p className="eyebrow text-[#f0e2d4] mb-4">Stories in cloth</p>
-            <h1 className="font-display text-5xl md:text-7xl lg:text-[80px] leading-[0.9]">
-              The Collections
-            </h1>
-            <p className="mt-6 text-sm tracking-wide text-[#cfc1b1] md:text-base leading-relaxed max-w-xl">
-              Explore our curated editorials. From quiet everyday essentials to the opulence of our festive wear, each collection is a celebration of Pakistani heritage and meticulous craftsmanship.
-            </p>
-          </div>
+        <div className="absolute inset-0 bg-[#2f2925]/40" />
+        <div className="relative text-center px-5 reveal z-10">
+          <p className="eyebrow text-[#cfc1b1] mb-6 tracking-[0.3em]">The Archives</p>
+          <h1 className="font-display text-6xl md:text-8xl lg:text-[110px] text-[#f8f1e7] leading-none">
+            Collections
+          </h1>
+          <div className="w-16 h-[1px] bg-[#cfc1b1] mx-auto mt-10 mb-8" />
+          <p className="text-xs tracking-[0.25em] text-[#cfc1b1] uppercase">
+            Stories Woven In Cloth
+          </p>
         </div>
       </div>
       
-      <div className="mx-auto max-w-[1440px] px-5 py-16 md:px-12 md:py-28">
-        <div className="grid gap-x-8 gap-y-20 md:grid-cols-2">
-          {collections.map((c, i) => (
+      {/* Editorial Layout */}
+      <div className="mx-auto max-w-[1440px] px-5 py-24 md:px-16 md:py-40 flex flex-col gap-32 md:gap-48">
+        {collections.map((c, i) => {
+          const isEven = i % 2 === 0;
+          return (
             <Link
               href={`/collection/${c.slug}`}
-              className={`${i % 2 ? "md:mt-32" : ""} group reveal`}
+              className={`group flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-12 md:gap-24`}
               key={c.slug}
               data-testid={`link-collection-${c.slug}`}
             >
-              <div className="overflow-hidden relative bg-[#ebe1d5]">
+              {/* Image Block */}
+              <div className="w-full md:w-[55%] lg:w-[60%] overflow-hidden relative bg-[#ebe1d5]">
                 <img
                   src={c.image}
                   alt={c.name}
-                  className="aspect-[4/5] w-full object-cover object-top transition duration-1000 group-hover:scale-[1.03]"
+                  className="aspect-[4/5] md:aspect-[3/4] w-full object-cover object-top transition duration-[1.5s] group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition duration-700" />
               </div>
-              <div className="mt-6 flex flex-col md:flex-row md:items-baseline md:justify-between border-b border-[#ded2c4] pb-5 group-hover:border-[#2f2925] transition-colors">
-                <div>
-                  <p className="eyebrow text-[#a74636] mb-2">{c.kicker}</p>
-                  <h2 className="font-display text-4xl text-[#2f2925] group-hover:text-[#a74636] transition-colors">{c.name}</h2>
-                </div>
-                <div className="mt-4 md:mt-0 opacity-0 transform translate-x-[-10px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
-                  <ArrowRight size={20} className="text-[#a74636]" strokeWidth={1.5} />
+              
+              {/* Text Block */}
+              <div className={`w-full md:w-[45%] lg:w-[40%] flex flex-col justify-center text-center ${isEven ? 'md:text-left' : 'md:text-right'} reveal`}>
+                <p className="eyebrow text-[#a74636] mb-5 tracking-[0.25em]">{c.kicker}</p>
+                <h2 className="font-display text-5xl md:text-7xl lg:text-[80px] text-[#2f2925] mb-8 leading-[0.9]">{c.name}</h2>
+                <div className={`w-12 h-[1px] bg-[#a74636] mx-auto ${isEven ? 'md:mx-0' : 'md:ml-auto md:mr-0'} mb-10 transition-all duration-700 group-hover:w-24`} />
+                <p className={`text-base leading-8 text-[#776b61] mb-12 max-w-md mx-auto ${isEven ? 'md:mx-0' : 'md:ml-auto md:mr-0'}`}>
+                  {c.description}
+                </p>
+                <div className={`inline-flex items-center gap-4 text-xs uppercase tracking-[0.2em] text-[#2f2925] group-hover:text-[#a74636] transition-colors justify-center ${isEven ? 'md:justify-start' : 'md:justify-end'}`}>
+                  <span>Explore Collection</span>
+                  <ArrowRight size={16} strokeWidth={1} className={`transform transition-transform duration-500 group-hover:translate-x-2`} />
                 </div>
               </div>
-              <p className="mt-5 max-w-md text-sm leading-7 text-[#776b61]">
-                {c.description}
-              </p>
             </Link>
-          ))}
-        </div>
+          );
+        })}
       </div>
-    </>
+    </div>
   );
 }
 function StaticPage({ kind }: { kind: string }) {
